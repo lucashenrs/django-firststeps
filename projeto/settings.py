@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'produto.apps.ProdutoConfig',
-    'sobre.apps.SobreConfig'
+    'sobre.apps.SobreConfig',
+    'home.apps.HomeConfig'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'projeto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'paginas')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
